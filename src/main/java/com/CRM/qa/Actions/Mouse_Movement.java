@@ -23,10 +23,8 @@ public class Mouse_Movement {
 		driver.findElement(By.name("password")).sendKeys("RanaRaghuRaju7");
 		Click_ON.clickon(driver, driver.findElement(By.xpath("//input[@type='submit'][@value='Login']")), 20);
 		Actions action = new Actions(driver);
-		action.moveToElement(driver.findElement(By.linkText("https://www.freecrm.com/system/index.cfm?action=contact"))).build().perform();
+		action.moveToElement(driver.findElement(By.linkText("/https://www.freecrm.com/system/index.cfm?action=client"))).build().perform();
 		Thread.sleep(3000);
-		action.moveToElement(driver.findElement(By.xpath("//a[text()='Contacts']"))).build().perform();
-		Thread.sleep(3000);
-		action.moveToElement(driver.findElement(By.xpath("//a[text()='Contacts']//following::a[3]"))).click();
+		action.moveToElement(driver.findElement(By.linkText("https://www.freecrm.com/system/index.cfm?action=client&sub=search"))).click();
 	}
 }
